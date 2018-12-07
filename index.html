@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="icon" href="images/favicon.png" type="image/gif" sizes="16x16">
+<title>The Camping Expert</title>
+<link rel="stylesheet" type="text/css" href="globalstyles.css">
+</head>
+<body style="margin:0px">
+<div class="titlebar">The Camping Expert</div>
+<div class="navbar">
+  <a href="index.html" style="font-size:0px">
+    <div style="background:rgba(225, 225, 225, 0.7); left:0px; position:relative; top:0px; width:180px; height:40px; display:inline-block; padding:10px" class="navelement">
+      Home
+    </div>
+  </a>
+  <div class="dropdown1">
+  <a href="supplies.html"  style="font-size:0px">
+    <div style="position:relative; left:0px; top:0px; width:180px; height:40px; display:inline-block; padding:10px" class="navelement">
+      Supplies
+    </div>
+    <div class="dropdown-content1">
+	<a href="supplies-utility.html#bottom">Utility</a>
+    	<a href="supplies-cooking.html#bottom">Cooking</a>
+    	<a href="supplies.html#bottom">Sales Policy</a>
+    </div>
+  </a>
+  </div>
+  <div class="dropdown2">
+  <a href="campsites.html"  style="font-size:0px">
+    <div style="position:relative; left:0px; top:0px; width:180px; height:40px; display:inline-block; padding:10px" class="navelement">
+      Campsites
+    </div>
+    <div class="dropdown-content2">
+	<a href="campsites-beach.html#bottom">Beach Sites</a>
+    	<a href="campsites-forest.html#bottom">Forest Sites</a>
+    	<a href="campsites.html#bottom">Advice</a>
+    </div>
+  </a>
+  </div>
+</div>
+
+<div class="slideshow-container">
+
+<div class="slides fade">
+<a href="supplies-cooking.html#bottom">
+  <img src="images/food.jpeg" style="width:2500px; cursor:pointer">
+</a>
+  <div class="text">Delicious Camping Food</div>
+</div>
+
+<div class="slides fade">
+<a href="supplies-utility.html#bottom">
+  <img src="images/tent.jpg" style="width:2500px; cursor:pointer">
+</a>
+  <div class="text">Supplies You Need</div>
+</div>
+
+<div class="slides fade">
+<a href="campsites-forest.html#bottom">
+  <img src="images/ice.jpg" style="width:2500px; cursor:pointer">
+</a>
+  <div class="text">Beautiful Campsites</div>
+</div>
+
+<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</div>
+<br>
+
+<div style="text-align:center; position:relative; top:-60px">
+  <span class="dot" onclick="currentSlide(1)"></span> 
+  <span class="dot" onclick="currentSlide(2)"></span> 
+  <span class="dot" onclick="currentSlide(3)"></span> 
+</div>
+
+<div style="margin:0px; padding:0px; width:100%; position:relative; top:0px">
+<div style="margin:0px; padding:0px; position:relative; left:0px; width:55%; display:inline-block; vertical-align:top">
+<div class="heading">
+	Our Mission
+</div>
+<div class="description">
+	We serve the individual. Everyone should be able to enjoy the outdoors and have access to all of its wonders an beauties. We ensure that you can find the best campsites and the lowest prices on equipment. This isn't just getting more than 25% off, it is creating an easily accessible camping experience for all.
+</div>
+<div class="heading">
+	Where We Operate
+</div>
+<div class="description">
+	Our main focus is in California. This state has a huge variety of campsites and thus experiences. Even if you are just visiting California, it is very worthwile to try camping at a site like the Shast Trinity National Park. However, we are happy to provide services to people in other states or even countries. Contact us with the contact info in the footer for more information.
+</div>
+</div>
+<div style="margin:0px; padding:0px; position:relative; right:0px; width:40%; display:inline-block; vertical-align:top">
+	<img src="images/california.jpg" alt="california">
+</div>
+</div>
+<div class="foot" style="top:50px">
+Contact us at 555-555-5555<br>
+Email us at default.user.name@gmail.com or camping@atmysite.net<br>
+The site and company name are registered trademarks of 1997<br>
+All Rights Reserved - <em>Don't Do Drugs Kids</em>
+</div>
+</body>
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("slides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+}
+</script>
+</html>
